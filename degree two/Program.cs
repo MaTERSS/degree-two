@@ -19,14 +19,15 @@ namespace CSharplight
             int degree = 1;
             int startOfRange = 0;
             int endOfRange = 30;
-            Random rand = new Random();
-            int number = rand.Next(startOfRange, endOfRange);
+            Random random = new Random();
+            int number = random.Next(startOfRange, endOfRange);
             
-            while (numberToDegree < number)
+            while (numberToDegree <= number)
             {                
                 numberToDegree *= numberForDegree;  
                 degree++;                
-            }                            
+            }           
+         
                 Console.WriteLine($"для числа {number} будет {numberForDegree} в степени {degree}, то есть {numberToDegree}");
         }
     }
